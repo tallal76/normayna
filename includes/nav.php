@@ -1,7 +1,7 @@
 <header>
     <nav>
         <div class="logo">
-            <a href="index.php?page=accueil"><img src="./assets/img/normayna.png" alt="logo"></a>
+            <a href="index.php?page=accueil"><img src="./assets/img/normaynawhite.png" alt="logo"></a>
         </div>
         <div class="menu">
             <ul>
