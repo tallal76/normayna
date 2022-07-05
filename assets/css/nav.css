@@ -1,12 +1,9 @@
-header {
+/* header {
     width: 80%;
     margin: 0 auto;
     background-color: white;
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-}
+
 header nav ul {
     padding: 0;
    
@@ -23,11 +20,11 @@ header nav ul li a {
     padding: 5px 10px;
     text-decoration:none ;
 }
-.logo{
+*/.navbar__logo{
     width: 50%;
 }
 img{
   
     height:100%;
     width: 25%;
-}
+} 
