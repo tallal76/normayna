@@ -6,7 +6,7 @@
       <li class="navbar__link first"><a href="index.php?page=accueil">Accueil</a></li>
       <li class="navbar__link second"><a href="index.php?page=carte">La carte</a></li>
       <li class="navbar__link third"><a href="index.php?page=evenement">Evenements</a></li>
-      <li class="navbar__link four"><a href="index.php?page=apropos">A propos</a></li>
+      <li class="navbar__link four"><a href="index.php?page=apropos">À-propos</a></li>
 
     </ul>
     <button class="burger" onclick="show()">
