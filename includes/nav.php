@@ -1,7 +1,7 @@
 <header>
 
   <nav class="navbar dark-mode" role="navigation">
-    <div class="navbar__logo"><a href="index.php?page=accueil"><img src="./assets/img/normayna300.png" alt="logo"></a></div>
+    <div class="navbar__logo"><a href="index.php?page=accueil"><img src="./assets/img/favicon-144.png" alt="logo"></a></div>
     <ul class="navbar__links">
       <li class="navbar__link first"><a href="index.php?page=accueil">Accueil</a></li>
       <li class="navbar__link second"><a href="index.php?page=carte">La carte</a></li>
