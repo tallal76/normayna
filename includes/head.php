@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/6fd70f3f24.js"></script>
     <script src="./assets/js/menu.js" defer></script>
-
+    <script src="./assets/js/slider.js" defer></script>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <title>Normayna</title>
   
 </head>
