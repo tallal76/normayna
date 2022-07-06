@@ -20,8 +20,8 @@ header nav ul li a {
     padding: 5px 10px;
     text-decoration:none ;
 }
-*/.navbar__logo{
-    width: 50%;
+*/.navbar__logo img{
+    width: 100%;
 }
 img{
   
