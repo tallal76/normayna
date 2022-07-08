@@ -1,0 +1,30 @@
+
+ 
+  .corp{
+    background-image: linear-gradient(rgba(111, 53, 34, 0.65)
+    , rgba(185, 79, 44, 0.65)), url("../img/imgabout/bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    height: 100%;
+    width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+ text-align: center;
+}
+.container >img{
+    margin-top: 5%;
+ height: 40%;
+ width: 35%;
+z-index: 1;
+}
+.bg-faded{
+    background: linear-gradient(rgb(78, 72, 72),white);
+}
+.about-heading-content{
+width: 55%;
+margin-bottom: 10%;
+}
