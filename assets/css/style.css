@@ -5,6 +5,10 @@
 @import url("./footer.css");
 @import url("./menu.css");
 
+@import url("./event.css");
+
+
 body {
     font-family: "font-family: 'Stint Ultra Expanded', cursive";
   }
+
