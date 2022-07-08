@@ -1,0 +1,33 @@
+h1{
+    font-size: medium;
+    margin-top: 3%;
+ 
+}
+ul li{
+  display: inline-block;
+  padding: 1rem;
+}
+ul li a{
+text-decoration: none;
+}
+
+.principal{
+    background-image: linear-gradient(rgba(243, 210, 200, 0.65)
+, rgba(247, 231, 226, 0.65)), url("../img/img1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+ 
+    height: 100%;
+    width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+ text-align: center;
+}
+.box{
+    margin: 15% 20%;
+}
+.waring{
+background-color: red;
+}
