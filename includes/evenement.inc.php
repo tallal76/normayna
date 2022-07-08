@@ -17,8 +17,10 @@ if(isset($_GET['link'])){
   }elseif($var == "past"){
     $requette = "select * from evenements where date_event  < NOW();";
 }}
-
-//$requette = "select * from evenements  ;";//pour le teste if faut changer la date NOW() ou une date > '2022-07-22';
+else{
+$requette = "select * from evenements  ;";
+}
+//pour le teste if faut changer la date NOW() ou une date > '2022-07-22';
 $cnx = new sql();
 $requette = $cnx->afficher($requette);
 if (isset($requette) & !empty($requette)) {
