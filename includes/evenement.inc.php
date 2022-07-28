@@ -11,14 +11,14 @@
 if(isset($_GET['link'])){
   $var = $_GET['link'];
   if($var == "futur"){
-    $requette = "select * from evenements where date_event >NOW() ;";
+    $requette = "SELECT * from evenements where DATE(date_event) >NOW() ;";
   }elseif($var == "today"){
-    $requette = "select * from evenements where date_event = CURDATE();";
+    $requette = "SELECT *from evenements where DATE(date_event) = (SELECT DATE( NOW() ));";
   }elseif($var == "past"){
-    $requette = "select * from evenements where date_event  < NOW();";
+    $requette = "SELECT *from evenements where date_event  < NOW();";
 }}
 else{
-$requette = "select * from evenements  ;";
+$requette = "SELECT *from evenements ;";
 }
 //pour le teste if faut changer la date NOW() ou une date > '2022-07-22';
 $cnx = new sql();
@@ -37,14 +37,17 @@ if (isset($requette) & !empty($requette)) {
     echo '<td>video_event</td>';
     
     echo '</tr>';
-    
+   
     foreach ($requette as $key => $value) {
-    
+     $originalDate =  $value['date_event'];
+
+$timestamp = strtotime($originalDate); 
+$newDate = date("d-m-Y", $timestamp );
     
         echo '<tr>';
         echo '<td>' . $value['theme_event'] . '</td>';
         echo '<td>' . $value['adress_event'] . '</td>';
-        echo '<td>' . $value['date_event'] . '</td>';
+        echo '<td>' .$newDate . '</td>';
         echo '<td>' . $value['description_event'] . '</td>';
        echo '<td>' . $value['video_event'] . '</td>';
        
