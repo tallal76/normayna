@@ -32,8 +32,9 @@ if (isset($requette) & !empty($requette)) {
     echo '<td>theme_event</td>';
     echo '<td>adress_event</td>';
     
-    echo '<td>date_event</td>';
+    echo '<td>La date</td>';
     echo '<td>description_event</td>';
+    echo '<td>Heure</td>';
     echo '<td>video_event</td>';
     
     echo '</tr>';
@@ -43,12 +44,15 @@ if (isset($requette) & !empty($requette)) {
 
 $timestamp = strtotime($originalDate); 
 $newDate = date("d-m-Y", $timestamp );
+$heure = date("H:i:s",$timestamp);
+
     
         echo '<tr>';
         echo '<td>' . $value['theme_event'] . '</td>';
         echo '<td>' . $value['adress_event'] . '</td>';
-        echo '<td>' .$newDate . '</td>';
+        echo '<td style = width:20%;> ' .$newDate . '</td>';
         echo '<td>' . $value['description_event'] . '</td>';
+       echo '<td>' . $heure . '</td>';
        echo '<td>' . $value['video_event'] . '</td>';
        
      /*    echo '<td> <input type="submit" name="submit" value="Uploader" /></td>'; */
