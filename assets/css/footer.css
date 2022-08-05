@@ -7,7 +7,7 @@
     font-size: 100%;
   }
   #top-footer {
-    background-color:#380E72;
+    background-color:#000E6A;
     color: #F2F3F4;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
     font-size: 20px;
   }
   #top-footer strong{
-    color:#E07600;
+    color:#FEC700;
   }
   .footer {
     display: flex;
@@ -51,7 +51,7 @@
     font-size: 15px;
   }
   .nav__title strong {
-   color:#E07600;
+   color:#FEC700;
   }
   .footer address {
     font-style: normal;
@@ -65,7 +65,7 @@
     justify-content: center;
     height: 36px;
     max-width: max-content;
-    background-color: #380E72;
+    background-color: #000E6A;
     border-radius: 4px;
     color: #F2F3F4;
     line-height: 0;
@@ -119,9 +119,47 @@
     align-items: center;
   }
   #maps{
-    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: #280F4C;
+    margin-top: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+
   }
- 
+  #facebook{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: #280F4C;
+    
+   
+  }
+  .facebook1{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 5px;
+    
+
+  }
+  .facebook2{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 5px;
+    
+
+  }
  
   @media screen and (min-width: 24.375em) {
     .legal .legal__links {
@@ -129,7 +167,7 @@
     }
     #map-responsive {
       overflow:hidden;
-      padding-bottom:56.25%;
+      padding-bottom:10px;
       position:relative;
       height:0;
       }
