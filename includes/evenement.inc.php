@@ -36,25 +36,25 @@
     echo '<table>';
     echo '<thead>';
     echo '<tr>';
-    echo '<th>theme_event</th>';
-    echo '<th>adress_event</th>';
+    echo '<th>Thème</th>';
+    echo '<th>Adresse</th>';
 
-    echo '<th>date_event</th>';
-    echo '<th>description_event</th>';
-    echo '<th>video_event</th>';
+    echo '<th>Date</th>';
+    echo '<th>Description</th>';
+    echo '<th>Video</th>';
 
     echo '</tr>';
     echo '</thead>';
-    
+
     foreach ($requette as $key => $value) {
 
       echo '<tbody>';
       echo '<tr>';
-      echo '<td data-column="theme_event">' . $value['theme_event'] . '</td>';
-      echo '<td data-column="adress_event">' . $value['adress_event'] . '</td>';
-      echo '<td data-column="date_event">' . $value['date_event'] . '</td>';
-      echo '<td data-column="description_event">' . $value['description_event'] . '</td>';
-      echo '<td data-column="video_event">' . $value['video_event'] . '</td>';
+      echo '<td data-column="Thème">' . $value['theme_event'] . '</td>';
+      echo '<td data-column="Adresse">' . $value['adress_event'] . '</td>';
+      echo '<td data-column="Date">' . $value['date_event'] . '</td>';
+      echo '<td data-column="Description">' . $value['description_event'] . '</td>';
+      echo '<td data-column="Video">' . $value['video_event'] . '</td>';
 
       /*    echo '<td> <input type="submit" name="submit" value="Uploader" /></td>'; */
       echo '</tr>';
