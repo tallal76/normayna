@@ -8,6 +8,7 @@
 
     <?php
 
+
   if (isset($_GET['link'])) {
     $var = $_GET['link'];
     if ($var == "futur") {
@@ -30,6 +31,8 @@
   $cnx = new sql();
   $requette = $cnx->afficher($requette);
   if (isset($requette) & !empty($requette)) {
+
+
     echo '<div class="container">';
     echo '<div class="box">';
 
