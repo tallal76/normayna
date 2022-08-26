@@ -1,23 +1,31 @@
 <div class="principal">
-<h1>La liste des Evenements</h1>
-<ul>
-    <li><a href="index.php?page=evenement&link=futur">Evenement avenir</a></li>
-    <li><a href="index.php?page=evenement&link=today">Evenement d'aujoud'hui</a></li>
-    <li><a href="index.php?page=evenement&link=past">Evenement passer</a></li>
-</ul>
+    <h1>La liste des Evenements</h1>
+    <ul>
+        <li><a href="index.php?page=evenement&link=futur">Evenement avenir</a></li>
+        <li><a href="index.php?page=evenement&link=today">Evenement d'aujoud'hui</a></li>
+        <li><a href="index.php?page=evenement&link=past">Evenement passer</a></li>
+    </ul>
 
     <?php
 
 if(isset($_GET['link'])){
   $var = $_GET['link'];
   if($var == "futur"){
-    $requette = "select * from evenements where date_event >NOW() ;";
+    $requette = "select theme_event,adress_event,
+    DATE_FORMAT(date_event, '%d/%m/%Y %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event >NOW() ;";
   }elseif($var == "today"){
-    $requette = "select * from evenements where date_event = CURDATE();";
+    $requette = "select theme_event,adress_event,
+    DATE_FORMAT(date_event, '%d/%m/%Y %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event = SELECT DATE( NOW() );";
   }elseif($var == "past"){
-    $requette = "select * from evenements where date_event  < NOW();";
+    $requette = "select theme_event,adress_event,
+    DATE_FORMAT(date_event, '%d/%m/%Y %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event  < NOW();";
 }}
-
+else{
+  
+  $requette = "SELECT theme_event,adress_event,
+   DATE_FORMAT(date_event, '%d/%m/%Y %H:%i:%s') as date_event ,description_event,video_event FROM evenements;";
+  //$requette = "select * from evenements  ;";
+  }
 //$requette = "select * from evenements  ;";//pour le teste if faut changer la date NOW() ou une date > '2022-07-22';
 $cnx = new sql();
 $requette = $cnx->afficher($requette);
