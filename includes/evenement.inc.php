@@ -12,18 +12,18 @@
     $var = $_GET['link'];
     if ($var == "futur") {
       $requette = "select theme_event,adress_event,
-    DATE_FORMAT(date_event, '%d/%m/%Y %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event >NOW() ;";
+    DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event >NOW() ;";
     } elseif ($var == "today") {
       $requette = "select theme_event,adress_event,
-    DATE_FORMAT(date_event, '%d/%m/%Y %H:%i:%s') as date_event ,description_event,video_event from evenements where date(date_event) = CURRENT_DATE();";
+    DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date(date_event) = CURRENT_DATE();";
     } elseif ($var == "past") {
       $requette = "select theme_event,adress_event,
-    DATE_FORMAT(date_event, '%d/%m/%Y %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event  < NOW();";
+    DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event  < NOW();";
     }
   } else {
 
     $requette = "SELECT theme_event,adress_event,
-   DATE_FORMAT(date_event, '%d/%m/%Y %H:%i:%s') as date_event ,description_event,video_event FROM evenements;";
+   DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event FROM evenements;";
     //$requette = "select * from evenements  ;";
   }
   //$requette = "select * from evenements  ;";//pour le teste if faut changer la date NOW() ou une date > '2022-07-22';
@@ -33,31 +33,33 @@
     echo '<div class="container">';
     echo '<div class="box">';
 
-    echo '<table border="3">';
+    echo '<table>';
+    echo '<thead>';
     echo '<tr>';
-    echo '<td>theme_event</td>';
-    echo '<td>adress_event</td>';
+    echo '<th>theme_event</th>';
+    echo '<th>adress_event</th>';
 
-    echo '<td>date_event</td>';
-    echo '<td>description_event</td>';
-    echo '<td>video_event</td>';
+    echo '<th>date_event</th>';
+    echo '<th>description_event</th>';
+    echo '<th>video_event</th>';
 
     echo '</tr>';
-
+    echo '</thead>';
+    
     foreach ($requette as $key => $value) {
 
-
+      echo '<tbody>';
       echo '<tr>';
-      echo '<td>' . $value['theme_event'] . '</td>';
-      echo '<td>' . $value['adress_event'] . '</td>';
-      echo '<td>' . $value['date_event'] . '</td>';
-      echo '<td>' . $value['description_event'] . '</td>';
-      echo '<td>' . $value['video_event'] . '</td>';
+      echo '<td data-column="theme_event">' . $value['theme_event'] . '</td>';
+      echo '<td data-column="adress_event">' . $value['adress_event'] . '</td>';
+      echo '<td data-column="date_event">' . $value['date_event'] . '</td>';
+      echo '<td data-column="description_event">' . $value['description_event'] . '</td>';
+      echo '<td data-column="video_event">' . $value['video_event'] . '</td>';
 
       /*    echo '<td> <input type="submit" name="submit" value="Uploader" /></td>'; */
       echo '</tr>';
     }
-
+    echo '</tbody>';
     echo '</table>';
     echo '</div>';
     echo '</div>';
