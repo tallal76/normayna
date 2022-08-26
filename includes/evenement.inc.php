@@ -13,7 +13,7 @@
     $var = $_GET['link'];
     if ($var == "futur") {
       $requette = "select theme_event,adress_event,
-    DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event >NOW() ;";
+    DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date(date_event) >CURRENT_DATE();";
     } elseif ($var == "today") {
       $requette = "select theme_event,adress_event,
     DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date(date_event) = CURRENT_DATE();";
