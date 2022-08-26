@@ -1,3 +1,4 @@
+
 <div class="boite">
     <div class="contenu_carou_auto">
         <div class="caroussel-image">
@@ -11,3 +12,4 @@
             <img src="./assets/imgslider/téléchargement.jpg" alt>
         </div>
     </div>
+
