@@ -1,58 +1,15 @@
-<h1>Home</h1>
 
-<body>
-    <div class="container">
-
-
-        <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="./assets/imgslider/img1.jpg"></div>
-                <div class="swiper-slide"><img src="./assets/imgslider/img2.jpg"></div>
-                <div class="swiper-slide"><img src="./assets/imgslider/img3.jpg"></div>
-             
-            </div>
-            <!--  pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!--  navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-
+<div class="boite">
+    <div class="contenu_carou_auto">
+        <div class="caroussel-image">
+            <img src="./assets/imgslider/briwate.jpg" alt>
+            <img src="./assets/imgslider/couscous-mergez.jpg" alt>
+            <img src="./assets/imgslider/msmen-farsi.jpg" alt>
+            <img src="./assets/imgslider/msmn.jpg" alt>
+            <img src="./assets/imgslider/poulet.jpg" alt>
+            <img src="./assets/imgslider/viande-prune.jpg" alt>
+            <img src="./assets/imgslider/chekhchoukha-plat-algerien.jpeg" alt>
+            <img src="./assets/imgslider/téléchargement.jpg" alt>
         </div>
-
-
     </div>
 
-
-
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            // autoplay to make pictures moves after 3 sec
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            loop: true,
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-
-
-        });
-    </script>
-</body>
