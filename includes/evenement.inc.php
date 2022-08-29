@@ -1,12 +1,12 @@
 <div class="principal">
-    <h1>La liste des Evenements</h1>
-    <ul>
-        <li><a href="index.php?page=evenement&link=futur">Evenement avenir</a></li>
-        <li><a href="index.php?page=evenement&link=today">Evenement d'aujoud'hui</a></li>
-        <li><a href="index.php?page=evenement&link=past">Evenement passer</a></li>
-    </ul>
+  <h1>La liste des Evenements</h1>
+  <ul>
+    <li><a href="index.php?page=evenement&link=futur">Evenement avenir</a></li>
+    <li><a href="index.php?page=evenement&link=today">Evenement d'aujoud'hui</a></li>
+    <li><a href="index.php?page=evenement&link=past">Evenement passer</a></li>
+  </ul>
 
-    <?php
+  <?php
 
 
   if (isset($_GET['link'])) {
@@ -59,7 +59,6 @@
       echo '<td data-column="Description">' . $value['description_event'] . '</td>';
       echo '<td data-column="Video">' . $value['video_event'] . '</td>';
 
-      /*    echo '<td> <input type="submit" name="submit" value="Uploader" /></td>'; */
       echo '</tr>';
     }
     echo '</tbody>';
