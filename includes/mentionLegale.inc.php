@@ -1,3 +1,5 @@
+<div id="box">
+
 <h1>Mentions légales et politique de confidentialité</h1>
 <p>L'entreprise individuelle MADAME FATNA BELKASMI, soucieuse des droits des individus, notamment au regard des traitements automatisés et dans une volonté de transparence avec ses clients, a mis en place une politique reprenant l'ensemble de ces traitements, des finalités poursuivies par ces derniers ainsi que des moyens d'actions a la disposition des individus afin qu'ils puissent au mieux exercer leurs droits.</p>
 <p>Pour toute information complémentaire sur la protection des données personnelles, nous vous invitons à consulter le site: <a href="https://www.cnil.fr/">https://www.cnil.fr/</a> </p>
@@ -49,7 +51,7 @@
 <p>• le droit de s'opposer au traitement des données : les utilisateurs peuvent s'opposer à ce que leurs données soient traitées conformément aux hypothèses prévues par le RGPD ;</p>
 <p>• le droit à la portabilité: ils peuvent réclamer que la Plateforme leur remette les données personnelles qu'ils ont fournies pour les transmettre à une nouvelle Plateforme.</p>
 <p>Vous pouvez exercer ce droit en nous contactant, à l'adresse suivante: </p>
-<p>23 rue André Callac 76350 OISSEL</p>
+<p> <strong>23 rue André Callac 76350 OISSEL</strong> </p>
 <p>Ou par email, à l'adresse :</p>
 <p><a href="mailto:tallal76350@hotmail.fr">tallal76350@hotmail.fr</a></p>
 <p>Toute demande doit être accompagnée de la photocopie d'un titre d'identité en cours de validité signé et faire mention de l'adresse à laquelle l'éditeur pourra contacter le demandeur. La réponse sera adressée dans le mois suivant la réception de la demande. Ce délai d'un mois peut être prolongé de deux mois si la complexité de la demande et ou le nombre de demande l’exigent.</p>
@@ -91,4 +93,4 @@
 <p>Les présentes conditions d'utilisation du site sont régies par la loi française et soumises à la compétence des tribunaux du siège social de l'éditeur, sous réserve d'une attribution de compétence spécifique découlant d'un texte de loi ou réglementaire particulier.</p>
 <h2>Article 16- Contactez-nous</h2>
 <p>Pour toute question, information sur les produits présentés sur le site, ou concernant le site lui-même, vous pouvez laisser un message à l'adresse suivante: <a href="mailto:tallal76350@hotmail.fr">tallal76350@hotmail.fr</a>.</p>
-<p>Ces mentions légales et politique de confidentialité ont été créées sur le site Rocket Lawyer.</p>
+</div>
