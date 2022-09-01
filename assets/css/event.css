@@ -1,11 +1,12 @@
 h1 {
-   
   margin-top: 3%;
 }
+
 ul li {
   display: inline-block;
   padding: 1rem;
 }
+
 ul li a {
   text-decoration: none;
 }
@@ -77,6 +78,7 @@ and also iPads specifically.
   td,
   tr {
     display: block;
+    
   }
 
   /* Hide table headers (but not display: none;, for accessibility) */
