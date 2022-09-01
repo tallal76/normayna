@@ -12,6 +12,7 @@ class sql
         try {
             $this->connexion = new PDO("mysql:host=$this->serverName;dbname=$this->database", $this->userName, $this->userPassword);
             $this->connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         } catch (PDOException $e) {
             die("Erreur : " . $e->getMessage());
         }
@@ -21,4 +22,9 @@ class sql
     {
         return $this->connexion->query($query)->fetchAll();
     }
+    public function inserer($query)
+    {
+        $this->connexion->exec($query);
+    }
+    
 }
