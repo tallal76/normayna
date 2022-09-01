@@ -181,6 +181,14 @@
       #facebook{
         flex-direction:column ;
         }
+        iframe{
+          height: 120px;
+          width: 190px;
+        }
+        video{
+          height: 90px;
+          width: 150px;
+        }
       
   }
   
