@@ -34,7 +34,7 @@ if (count($events) == 0) {
                 <td><?= $event['date_event'] ?></td>
                 <td><?= $event['description_event'] ?></td>
                 <td><?= $event['video_event'] ?></td>
-                <td><a href="index.php?page=edit&id=<?= $event['id_event'] ?>" class="btn">Editer</a></td>
+                <td><a href="index.php?page=update&id=<?= $event['id_event'] ?>" class="btn">Editer</a></td>
                 <td><a href="index.php?page=supp&id=<?= $event['id_event'] ?>" class="btn btn-supp" onclick="return confirm('Etes vous certain de supprimer cet utilisateur ?')">Supprimer</a></td>
             </tr>
         <?php
