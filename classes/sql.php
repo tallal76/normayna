@@ -26,6 +26,10 @@ class sql
     {
         $this->connexion->exec($query);
     }
+    public function recup(string $query): array
+    {
+        return $this->connexion->query($query)->fetchAll();
+    }
     public function supprimer($query, $idUser)
     {
         $resultat = $this->connexion->prepare($query);
