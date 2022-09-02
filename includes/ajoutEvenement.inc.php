@@ -5,7 +5,7 @@ if (isset($_POST['frmAjoutEvenement'])){
     $adresse = htmlentities(trim($_POST['adresse']));
     $date = htmlentities(trim($_POST['date']));
     $description = htmlentities(trim($_POST['description']));
-    $video = htmlentities(trim($_POST['video'])); 
+    $video = (trim($_POST['video'])); 
    
     $erreurs = array();
 
@@ -46,7 +46,7 @@ if (isset($_POST['frmAjoutEvenement'])){
 
             $queryInsert = new Sql();
             $queryInsert->inserer($requete);
-            header('Location:./index.php?page=evenement&link=futur');
+            header('Location:./index.php?page=maj');
     }
 }
 else{
