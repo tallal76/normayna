@@ -26,5 +26,10 @@ class sql
     {
         $this->connexion->exec($query);
     }
-    
+    public function supprimer($query, $idUser)
+    {
+        $resultat = $this->connexion->prepare($query);
+        $resultat->bindValue(':id', $idUser, PDO::PARAM_INT);
+        $resultat->execute();
+    }
 }
