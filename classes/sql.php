@@ -21,4 +21,18 @@ class sql
     {
         return $this->connexion->query($query)->fetchAll();
     }
+    public function inserer($query)
+    {
+        $this->connexion->exec($query);
+    }
+    public function recup(string $query): array
+    {
+        return $this->connexion->query($query)->fetchAll();
+    }
+    public function supprimer($query, $idUser)
+    {
+        $resultat = $this->connexion->prepare($query);
+        $resultat->bindValue(':id', $idUser, PDO::PARAM_INT);
+        $resultat->execute();
+    }
 }
