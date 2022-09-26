@@ -2,7 +2,27 @@
 /*CONSTRAINT `FK_01` FOREIGN KEY (`clef_id`) REFERENCES `table2` (`id`) ON DELETE CASCADE ON UPDATE CASCADE*/
 <h1>Ajouter un Produit</h1>
 <?php
+//remplir la list
+
+$requette = "SELECT id_categorie,Libelle FROM categorie";
+$cnx = new sql();
+$requette = $cnx->afficher($requette);
+echo "<div>";
+echo "<label>Categorie :</label>";
+echo" <select >";
+ foreach ($requette as $key => $value) {
+$nom =   $value['Libelle'];
+
+   
+    echo "<option value=".$nom.">";
+   echo "$nom";
+    echo"</option>";
+
+} 
+echo"</select>";
+echo "</div>";
 if (isset($_POST['frmProduit'])) {
+    
     $libelle = htmlentities(trim($_POST['libelle']));
     $prix = htmlentities(trim($_POST['prix']));
     /* $file = htmlentities(trim($_POST['file'])); */
@@ -35,9 +55,6 @@ if (isset($_POST['frmProduit'])) {
 
         include './includes/frmProduit.php';
     } else {
-/*remplir la list
-
-
 
 
 
