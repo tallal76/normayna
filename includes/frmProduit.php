@@ -12,11 +12,26 @@
     <label for="file">Image :</label>
         <input type="file" name="file" value="<?= $file ?>" />
     </div>
-  
-    
+
+    <select name="repa" >
+<?php
+foreach ($requette as $key => $value){
+
+
+
+
+   $nom =   $value['Libelle'];
+   
+echo "<option value=".$nom.">";
+echo "$nom";
+echo "</option>";
+}
+?>
+
+</select>
     <div>
         <input type="reset" value="Effacer" />
-        <input type="submit" value="Enregistrer" />
+        <input type="submit" name ="submit" value="Enregistrer" />
     </div>
     <input type="hidden" name="frmProduit" />
 </form>
