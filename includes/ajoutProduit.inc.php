@@ -7,20 +7,16 @@
 $requette = "SELECT id_categorie,Libelle FROM categorie";
 $cnx = new sql();
 $requette = $cnx->afficher($requette);
-echo "<div>";
-echo "<label>Categorie :</label>";
-echo" <select >";
- foreach ($requette as $key => $value) {
-$nom =   $value['Libelle'];
 
-   
-    echo "<option value=".$nom.">";
-   echo "$nom";
-    echo"</option>";
-
+if(isset($_POST['submit']))
+{
+    $t=$_POST['repa'];
+    echo "vous avez selectionné" .$t;
 } 
-echo"</select>";
-echo "</div>";
+
+
+
+
 if (isset($_POST['frmProduit'])) {
     
     $libelle = htmlentities(trim($_POST['libelle']));
@@ -55,25 +51,27 @@ if (isset($_POST['frmProduit'])) {
 
         include './includes/frmProduit.php';
     } else {
-
-
+      
 
 /* tester si l'image existe */
-        if (isset($_FILES['file'])) {
+         if (isset($_FILES['file'])) {
             $tmpName = $_FILES['file']['tmp_name'];
             $name = $_FILES['file']['name'];
             $size = $_FILES['file']['size'];
             $error = $_FILES['file']['error'];
-         
+         //INSERT INTO `produits` (`Id`, `Titre`, `Prix`, `Url`, `Categorie`)
+         // VALUES (NULL, 'requete', '5', 'l00',( SELECT id_categorie from Categorie WHERE libelle ='Nos Plats'));
+//trouve une solution pour recuperer la valeur de l'id selection de la liste
 
-            $requete = "INSERT INTO produits (Titre, Prix, Url)
-            VALUES ('$libelle', '$prix', '$name');";
+            $ins = "INSERT INTO produits (Titre, Prix, Url,Categorie
+            )
+            VALUES ('$libelle', '$prix', '$name',( SELECT id_categorie from Categorie WHERE libelle ='$selected'));";
 
             $queryInsert = new Sql();
-            $queryInsert->inserer($requete);
+            $queryInsert->inserer($ins);
            move_uploaded_file($tmpName, './assets/images/' . $name);
             header('Location:./index.php?page=maj');
-        }
+        } 
     }
 } else {
     $libelle = $prix = $name = "";
