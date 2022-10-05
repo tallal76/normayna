@@ -4,26 +4,17 @@
 <?php
 //remplir la list
 
-$requette = "SELECT id_categorie,Libelle FROM categorie";
+$requette = "SELECT Libelle FROM categorie";
 $cnx = new sql();
 $requette = $cnx->afficher($requette);
 
-if(isset($_POST['submit']))
-{
-    $t=$_POST['repa'];
-    echo "vous avez selectionné" .$t;
-} 
-
-
-
-
+if (isset($_POST['submit'])) {
+    $t = $_POST['repa'];
+}
 if (isset($_POST['frmProduit'])) {
-    
+
     $libelle = htmlentities(trim($_POST['libelle']));
     $prix = htmlentities(trim($_POST['prix']));
-    /* $file = htmlentities(trim($_POST['file'])); */
-
-
     $erreurs = array();
 
     if (mb_strlen($libelle) === 0)
@@ -51,27 +42,27 @@ if (isset($_POST['frmProduit'])) {
 
         include './includes/frmProduit.php';
     } else {
-      
 
-/* tester si l'image existe */
-         if (isset($_FILES['file'])) {
+
+        /* tester si l'image existe */
+        if (isset($_FILES['file'])) {
             $tmpName = $_FILES['file']['tmp_name'];
             $name = $_FILES['file']['name'];
             $size = $_FILES['file']['size'];
             $error = $_FILES['file']['error'];
-         //INSERT INTO `produits` (`Id`, `Titre`, `Prix`, `Url`, `Categorie`)
-         // VALUES (NULL, 'requete', '5', 'l00',( SELECT id_categorie from Categorie WHERE libelle ='Nos Plats'));
-//trouve une solution pour recuperer la valeur de l'id selection de la liste
+            //INSERT INTO `produits` (`Id`, `Titre`, `Prix`, `Url`, `Categorie`)
+            // VALUES (NULL, 'requete', '5', 'l00',( SELECT id_categorie from Categorie WHERE libelle ='Nos Plats'));
+            //trouve une solution pour recuperer la valeur de l'id selection de la liste
 
             $ins = "INSERT INTO produits (Titre, Prix, Url,Categorie
             )
-            VALUES ('$libelle', '$prix', '$name',( SELECT id_categorie from Categorie WHERE libelle ='$selected'));";
+            VALUES ('$libelle', '$prix', '$name',( SELECT id_categorie from Categorie WHERE libelle ='$t'));";
 
             $queryInsert = new Sql();
             $queryInsert->inserer($ins);
-           move_uploaded_file($tmpName, './assets/images/' . $name);
+            move_uploaded_file($tmpName, './assets/images/' . $name);
             header('Location:./index.php?page=maj');
-        } 
+        }
     }
 } else {
     $libelle = $prix = $name = "";
