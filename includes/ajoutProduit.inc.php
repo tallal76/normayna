@@ -1,5 +1,4 @@
-/*je doit envoier que le nom de limage dans la base de donne mais le chemin reste fix apres je concatene avec la valeur recuperer pour afficher */
-/*CONSTRAINT `FK_01` FOREIGN KEY (`clef_id`) REFERENCES `table2` (`id`) ON DELETE CASCADE ON UPDATE CASCADE*/
+
 <h1>Ajouter un Produit</h1>
 <?php
 //remplir la list
@@ -54,9 +53,9 @@ if (isset($_POST['frmProduit'])) {
             // VALUES (NULL, 'requete', '5', 'l00',( SELECT id_categorie from Categorie WHERE libelle ='Nos Plats'));
             //trouve une solution pour recuperer la valeur de l'id selection de la liste
 
-            $ins = "INSERT INTO produits (Titre, Prix, Url,Categorie
+            $ins = "INSERT INTO produits (Titre, Prix, Url,Categorie,description
             )
-            VALUES ('$libelle', '$prix', '$name',( SELECT id_categorie from Categorie WHERE libelle ='$t'));";
+            VALUES ('$libelle', '$prix', '$name',( SELECT id_categorie from Categorie WHERE libelle ='$t'),'$description');";
 
             $queryInsert = new Sql();
             $queryInsert->inserer($ins);
