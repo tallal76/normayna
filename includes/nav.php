@@ -8,8 +8,10 @@
       <li class="navbar__link third"><a href="index.php?page=evenement"> Listes des Evenements</a></li>
       <li class="navbar__link four"><a href="index.php?page=apropos">À propos</a></li>
       <li class="navbar__link four"><a href="index.php?page=ajoutEvenement">Ajouter un event</a></li>
+
       <li class="navbar__link four"><a href="index.php?page=ajoutProduit">Ajouter un produit</a></li>
       <li class="navbar__link four"><a href="index.php?page=categorie">Ajouter une categorie</a></li>
+
     </ul>
     <button class="burger" onclick="show()">
       <span class="bar"></span>

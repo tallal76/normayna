@@ -12,6 +12,7 @@ class sql
         try {
             $this->connexion = new PDO("mysql:host=$this->serverName;dbname=$this->database", $this->userName, $this->userPassword);
             $this->connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         } catch (PDOException $e) {
             die("Erreur : " . $e->getMessage());
         }
@@ -25,6 +26,7 @@ class sql
     {
         $this->connexion->exec($query);
     }
+
     public function supprimer($query, $idUser)
     {
         $resultat = $this->connexion->prepare($query);
