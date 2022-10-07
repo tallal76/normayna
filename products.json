@@ -1,0 +1,320 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Soupes Chorba ou Harira",
+      "price": "3.50",
+      "url": "./assets/images/badoit.jpg",
+      "category": "Entrées"
+    },
+    {
+      "id": 2,
+      "title": "Brick Viande Hachée",
+      "price": "2.50",
+      "url": "./images/burger.svg",
+      "category": "Entrées"
+    },
+    {
+      "id": 3,
+      "title": "Brick au Thon",
+      "price": "2.50",
+      "url": "./images/dish-1.svg",
+      "category": "Entrées"
+    },
+    {
+      "id": 4,
+      "title": "Mselen Farcie au Viande Hachée",
+      "price": "3.00",
+      "url": "./images/french-fries.svg",
+      "category": "Entrées"
+    },
+    {
+      "id": 5,
+      "title": "Msemen Farcie au Legumes",
+      "price": "2.50",
+      "url": "./images/toastbread.png",
+      "category": "Entrées"
+    },
+    {
+      "id": 6,
+      "title": "Salade mechouis",
+      "price": "3.50",
+      "url": "./images/dish-1.png",
+      "category": "Entrées"
+    },
+    {
+      "id": 7,
+      "title": "Salade composée crudités",
+      "price": "3.00",
+      "url": "./images/dish-1.png",
+      "category": "Entrées"
+    },
+    {
+      "id": 8,
+      "title": "Couscous Royal(Poulet, Merguez, Agneau)",
+      "price": "13.00",
+      "url": "./images/dish-1.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 9,
+      "title": "Couscous Agneau",
+      "price": "11.00",
+      "url": "./images/dish-2.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 10,
+      "title": "Couscous Poulet",
+      "price": "9.50",
+      "url": "./images/dish-3.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 11,
+      "title": "Couscous Végétarien",
+      "price": "8.50",
+      "url": "./images/dish-4.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 12,
+      "title": "Couscous Sucré salé (Poulet ,oignons confits et raisins secs",
+      "price": "11.00",
+      "url": "./images/dish-5.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 13,
+      "title": "Tajine de Poulet aux olives accompagnement pomme de terre sautée",
+      "price": "8.50",
+      "url": "./images/dish-6.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 14,
+      "title": "Tajine d'Agneau aux pruneaux et amandes",
+      "price": "10.50",
+      "url": "./images/dish-7.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 15,
+      "title": "Pastille individuelles sucrée salée au poulet (Amandes et confits d'oigons)",
+      "price": "4.50",
+      "url": "./images/dish-8.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 16,
+      "title": "Pastille individuelles au poisson (Trio de poissons, crustacés et vermicelles de riz)",
+      "price": "7.00",
+      "url": "./images/dish-9.png",
+      "category": "Nos Plats"
+    },
+    {
+      "id": 17,
+      "title": "Merguez",
+      "price": "2.00",
+      "url": "./images/dish-9.png",
+      "category": "Nos Supplléments"
+    },
+    {
+      "id": 18,
+      "title": "Brochette de poulet",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Supplléments"
+    },
+    {
+      "id": 19,
+      "title": "Brochettes d'Agneau",
+      "price": "3.00",
+      "url": "./images/dish-9.png",
+      "category": "Nos Supplléments"
+    },
+    {
+      "id": 20,
+      "title": "Cornes de gazelles, Makrout, Boules de neige coco ,Briouates aux Amandes Baklawa roumé aux amandes,Sablé confiture",
+      "libele": "Plateaux de 30 piéces",
+      "price": "25.00",
+      "url": "./images/dish-9.png",
+      "category": "Nos Desserts",
+      "sous category": "Patisseries Orientales"
+    },
+    {
+      "id": 21,
+      "title": "Cornes de gazelles, Makrout, Boules de neige coco ,Briouates aux Amandes Baklawa roumé aux amandes,Sablé confiture",
+      "libele": "Plateaux de 10 piéces",
+      "price": "8.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Desserts",
+      "sous category": "Patisseries Orientales"
+    },
+    {
+      "id": 22,
+      "title": "Cornes de gazelles, Makrout, Boules de neige coco ,Briouates aux Amandes Baklawa roumé aux amandes,Sablé confiture",
+      "libele": "Patisserie a l'unité",
+      "price": "0.95",
+      "url": "./images/dish-9.png",
+      "category": "Nos Desserts",
+      "sous category": "Patisseries Orientales"
+    },
+      {
+      "id": 23,
+      "title": "Msemen (Galette feuilleté)",
+      "price": "1.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Desserts",
+      "sous category": "Patisseries Orientales"
+    },
+    {
+      "id": 24,
+      "title": "Baghrir (crêpes milles trous)",
+      "price": "1.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Desserts",
+      "sous category": "Patisseries Orientales"
+    },
+    {
+      "id": 25,
+      "title": "tiramisou",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Desserts"
+    },
+    {
+      "id": 26,
+      "title": "Pepsi 33Cl",
+      "price": "1.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 27,
+      "title": "7up 33Cl",
+      "price": "1.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 28,
+      "title": "Ice Tea 33Cl",
+      "price": "1.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 29,
+      "title": "Orangina 33Cl",
+      "price": "1.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 30,
+      "title": "Badoit 33Cl",
+      "price": "1.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 31,
+      "title": "FREEZ (Mojito)",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 32,
+      "title": "FREEZ (Grenadine)",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 33,
+      "title": "FREEZ (Kiwi)",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 34,
+      "title": "FREEZ (Fraise)",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 35,
+      "title": "FREEZ (Lemon Ice)",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 36,
+      "title": "FREEZ (Ananas Coco)",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 37,
+      "title": "FREEZ (Blue Hawaï)",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 38,
+      "title": "Orangina 1.5L",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 39,
+      "title": "7up 1.5L",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 40,
+      "title": "Oasis 1.5L",
+      "price": "2.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 41,
+      "title": "Eau Evian 1.5L",
+      "price": "2.00",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 42,
+      "title": "Thé à la manthe",
+      "price": "1.50",
+      "url": "./images/dish-9.png",
+      "category": "Nos Boissons"
+    },
+    {
+      "id": 43,
+      "title": "Brick Légumes",
+      "price": "2.50",
+      "url": "./images/dish-1.svg",
+      "category": "Entrées"
+    },
+    {
+      "id": 43,
+      "title": "Brick poulet",
+      "price": "2.50",
+      "url": "./images/burger.svg",
+      "category": "Entrées"
+    }
+  ]
+}
