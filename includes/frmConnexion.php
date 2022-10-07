@@ -1,22 +1,15 @@
 <form action="index.php?page=connexion" method="post">
-  <div class="form-group">
-    <label for="mail">Email </label>
-    <input type="email" name="mail" value="<?= $mail ?>" />
-  </div>
-  <div class="form-group">
-    <label for="password">Mot de passe</label>
-    <input type="password" name="password" />
-  </div>
-  <div class="form-group">
-    <a class="passwordOublie" href="#">Mot de passe oublié ?</a>
-  </div>
-  <div class="form-group" style="text-align:center;">
-    <input type="submit" value="Connexion" id="submitConnex" />
-  </div>
-  <input type="hidden" name="frmConnexion" />
-
+    <div>
+        <label for="mail">e-mail :</label>
+        <input type="text" id="mail" name="mail" value="<?= $mail ?>" required />
+    </div>
+    <div>
+        <label for="mdp">Mot de passe :</label>
+        <input type="password" id="mdp" name="mdp" required />
+    </div>
+    <div>
+        <input type="reset" value="Effacer" />
+        <input type="submit" name ="submit" value="Envoyer" />
+    </div>
+    <input type="hidden" name="frmConnexion" />
 </form>
-
-
-
-
