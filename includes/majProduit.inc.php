@@ -1,6 +1,6 @@
 <h1>Ms à jour produit</h1>
 <?php
-$requete = 'SELECT * FROM produits order by id DESC';
+$requete = 'SELECT a.Id,a.Titre,a.Prix,a.Url,a.description,b.Libelle FROM `produits` a JOIN categorie b on a.Categorie=b.id_categorie order by a.Id DESC';
 
 $querySelect = new Sql();
 $produits = $querySelect->afficher($requete);
@@ -33,7 +33,7 @@ if (count($produits) == 0) {
                 <td data-column="Prix"><?= $produit['Prix'] ?></td>
                 <td data-column="Description"><?= $produit['description'] ?></td>
                 <td data-column="Image"><img src="./assets/images/<?= $produit['Url'] ?>" style="width:50px"  alt=""></td>
-                <td data-column="Categorie"><?= $produit['Categorie'] ?></td>
+                <td data-column="Categorie"><?= $produit['Libelle'] ?></td>
                 <td><a href="index.php?page=supprimerProduit&id=<?= $produit['Id'] ?>" class="btn">Editer</a></td>
                 <td><a href="index.php?page=supprimerProduit&id=<?= $produit['Id'] ?>" class="btn btn-supp" onclick="return confirm('Etes vous certain de supprimer cet utilisateur ?')">Supprimer</a></td>
             </tr>
