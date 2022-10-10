@@ -38,7 +38,11 @@ if (isset($_POST['frmConnexion'])) {
                 $nom = $resultatLogin[0]['nom'];
                 $prenom = $resultatLogin[0]['prenom'];
                 if ($t == $resultatPassword) {
-                    $message = "Vous êtes connecté";
+
+                    $message = "Vous êtes connecté </br> Bienvenue" . $nom . " " . $prenom;
+
+                   
+
                     $_SESSION['login'] = true;
 
                     $messageEmail = $mail . ' vous êtes connecté !';
@@ -51,7 +55,7 @@ if (isset($_POST['frmConnexion'])) {
             } else {
                 $message = "Votre adresse n'est pas dans la base";
             }
-            echo "Bienvenue" . $nom . " " . $prenom . "</br>";
+
             echo $message;
 
             // $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/";
@@ -63,4 +67,6 @@ if (isset($_POST['frmConnexion'])) {
 } else {
     $mail = "";
     include './includes/frmConnexion.php';
+
 }
+
