@@ -1,19 +1,19 @@
 <div class="principal">
-    <h1>La liste des Evenements</h1>
-    <ul>
-        <li><a href="index.php?page=evenement&link=futur">Evenement avenir</a></li>
-        <li><a href="index.php?page=evenement&link=today">Evenement d'aujoud'hui</a></li>
-        <li><a href="index.php?page=evenement&link=past">Evenement passer</a></li>
-    </ul>
+  <h1>La liste des Evenements</h1>
+  <ul>
+    <li><a href="index.php?page=evenement&link=futur">Evenement avenir</a></li>
+    <li><a href="index.php?page=evenement&link=today">Evenement d'aujoud'hui</a></li>
+    <li><a href="index.php?page=evenement&link=past">Evenement passer</a></li>
+  </ul>
 
-    <?php
+  <?php
 
 
   if (isset($_GET['link'])) {
     $var = $_GET['link'];
     if ($var == "futur") {
       $requette = "select theme_event,adress_event,
-    DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date_event >NOW() ;";
+    DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date(date_event) >CURRENT_DATE();";
     } elseif ($var == "today") {
       $requette = "select theme_event,adress_event,
     DATE_FORMAT(date_event, '%d/%m/%Y à %H:%i:%s') as date_event ,description_event,video_event from evenements where date(date_event) = CURRENT_DATE();";
@@ -57,9 +57,8 @@
       echo '<td data-column="Adresse">' . $value['adress_event'] . '</td>';
       echo '<td data-column="Date">' . $value['date_event'] . '</td>';
       echo '<td data-column="Description">' . $value['description_event'] . '</td>';
-      echo '<td data-column="Video">' . $value['video_event'] . '</td>';
+      echo '<td data-column="Video"> <div class="video">' . $value['video_event'] . '</div></td>';
 
-      /*    echo '<td> <input type="submit" name="submit" value="Uploader" /></td>'; */
       echo '</tr>';
     }
     echo '</tbody>';

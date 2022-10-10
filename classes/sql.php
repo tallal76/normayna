@@ -12,6 +12,7 @@ class sql
         try {
             $this->connexion = new PDO("mysql:host=$this->serverName;dbname=$this->database", $this->userName, $this->userPassword);
             $this->connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
         } catch (PDOException $e) {
             die("Erreur : " . $e->getMessage());
         }
@@ -20,5 +21,16 @@ class sql
     public function afficher($query)
     {
         return $this->connexion->query($query)->fetchAll();
+    }
+    public function inserer($query)
+    {
+        $this->connexion->exec($query);
+    }
+
+    public function supprimer($query, $idUser)
+    {
+        $resultat = $this->connexion->prepare($query);
+        $resultat->bindValue(':id', $idUser, PDO::PARAM_INT);
+        $resultat->execute();
     }
 }

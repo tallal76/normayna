@@ -1,3 +1,4 @@
+
 <div id="facebook">
     <div id="maps" class="map-responsive">
         <iframe
@@ -99,8 +100,9 @@
     </ul>
 
     <div class="legal">
-        <p>&copy; <?php echo date("Y"); ?> - O DELICE DE NORMAYNA</p>
-    </div>
+    <p>&copy; <?php echo date("Y"); ?> - <a href="index.php?page=MentionLegale">- O DELICE DE NORMAYNA</a> </p>
+       </div>
+
 </footer>
 </body>
 

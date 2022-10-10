@@ -1,11 +1,16 @@
 h1 {
+<<<<<<< HEAD
   font-size: large;
+=======
+>>>>>>> 9698872d7bed59b15ab7a52329dcf2d54ad9fd20
   margin-top: 3%;
 }
+
 ul li {
   display: inline-block;
   padding: 1rem;
 }
+
 ul li a {
   text-decoration: none;
 }
@@ -79,6 +84,7 @@ and also iPads specifically.
   td,
   tr {
     display: block;
+    
   }
 
   /* Hide table headers (but not display: none;, for accessibility) */
