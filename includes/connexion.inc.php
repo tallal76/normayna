@@ -34,9 +34,11 @@ if (isset($_POST['frmConnexion'])) {
                 $resultatPassword = $resultatLogin[0]['password'];
                 $nom = $resultatLogin[0]['nom'];
                 $prenom = $resultatLogin[0]['prenom'];
+                $fullname = $nom." ".$prenom;
                 if ($t == $resultatPassword) {
-                    $message = "Vous êtes connecté </br> Bienvenue" . $nom . " " . $prenom;
-                    $_SESSION['login'] = true;
+                    $message = "Vous êtes connecté </br> Bienvenue " . $fullname;
+                  
+                    $_SESSION['login'] = $fullname;
                     $messageEmail = $mail . ' vous êtes connecté !';
                 } else {
                     $message = "Erreur d'authentification";
@@ -45,9 +47,10 @@ if (isset($_POST['frmConnexion'])) {
             } else {
                 $message = "Votre adresse n'est pas dans la base";
             }
-            echo $message;
+            header ('location:index.php?page=acceuil');
+           /*  echo $message;
             $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/";
-            echo "<p><a href=\"$url\">Revenir à la page d'accueil</a></p>";
+            echo "<p><a href=\"$url\">Revenir à la page d'accueil</a></p>"; */
         }
     }
 } else {
