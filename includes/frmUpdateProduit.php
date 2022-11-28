@@ -14,8 +14,23 @@
     </div>
     <div>
         <label for="Image">Image :</label>
-        <img src="./assets/images/<?= $Image ?>" style="width:50px"  alt="<?= $Image ?>">
-    </div>
+        <img src="./assets/images/<?= $Image ?>" style="width:200px"  alt="<?= $Image ?>">
+    </div>  
+    <div> 
+    <label for="file">Changer l'image :</label>
+    <?php 
+       if (isset($_FILES['file'])) {
+            $tmpName = $_FILES['file']['tmp_name'];
+            $name = $_FILES['file']['name'];
+            $fullName =$tmpName .'.'.$name;
+         
+    }
+    ?>        <input type="file" name="file" value="<?= $file ?>" />
+        <img src="<?= $fullName ?>" alt="">
+        <!-- faut chercher une moyenne pour afficher l'image selectionner dans le upload file 2-cocher une case et afficher l'image selectioner dans une nouvelle page   -->
+</div>
+     
+    
     <div>
     <label for="Categorie">Categorie :</label>
     <select name="cat">
