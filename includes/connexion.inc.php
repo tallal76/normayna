@@ -26,7 +26,7 @@ if (isset($_POST['frmConnexion'])) {
     } else {
         if (isset($_POST['submit'])) {
             $t = $_POST['mdp'];
-            $requeteLogin = "SELECT password,nom,prenom FROM utilisateur WHERE email='$mail'";
+            $requeteLogin = "SELECT password,nom,prenom,email FROM utilisateur WHERE email='$mail'";
             $sqlLogin = new Sql();
             $resultatLogin = $sqlLogin->afficher($requeteLogin);
             if (count($resultatLogin) > 0) {
@@ -34,20 +34,33 @@ if (isset($_POST['frmConnexion'])) {
                 $resultatPassword = $resultatLogin[0]['password'];
                 $nom = $resultatLogin[0]['nom'];
                 $prenom = $resultatLogin[0]['prenom'];
-                if ($t == $resultatPassword) {
-                    $message = "Vous êtes connecté </br> Bienvenue" . $nom . " " . $prenom;
+                $em = $resultatLogin[0]['email'];
+                $fullname = $nom . " " . $prenom;
+                if ($t == $resultatPassword && $em == $mail ) {
+                    $message= "Vous êtes connecté </br> Bienvenue " . $fullname;
                     $_SESSION['login'] = true;
+                    $_SESSION['login'] = $fullname;
                     $messageEmail = $mail . ' vous êtes connecté !';
                 } else {
-                    $message = "Erreur d'authentification";
-                    $_SESSION['login'] = false;
+                    var_dump($_SESSION['login']);
+                                     //   $_SESSION['login'] = false;
+                    $message= "Erreur d'authentification";
+                    $mail = "";
+                    include './includes/frmConnexion.php';
                 }
             } else {
-                $message = "Votre adresse n'est pas dans la base";
+
+                $message= "Votre adresse n'est pas dans la base";
+                $mail = "";
+                include './includes/frmConnexion.php';
             }
+            //
+            header ('location:index.php?page=acceuil');
             echo $message;
-            $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/";
-            echo "<p><a href=\"$url\">Revenir à la page d'accueil</a></p>";
+            //include './includes/frmConnexion.php';
+            /* $url = $_SERVER['HTTP_ORIGIN'] . dirname($_SERVER['REQUEST_URI']) . "/"; 
+            echo "<p><a href=\"$url\">Revenir à la page d'accueil</a></p>"; */
+            //PROBLEME DE CONNECTION QUAND EN SE CONNECTE PLUSIEUR FOIS MEME SI L ADRESSE ET FAUSE IL SE CONNECTE !!!!!!
         }
     }
 } else {
