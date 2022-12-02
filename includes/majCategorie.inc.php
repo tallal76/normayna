@@ -29,7 +29,7 @@ if (count($categories) == 0) {
                 <td data-column="Thème"><?= $categorie['Libelle'] ?></td>
                 <td data-column="Adresse"><?= $categorie['Description'] ?></td>
                 <td><a href="index.php?page=update&id=<?= $categorie['id_categorie'] ?>" class="btn">Editer</a></td>
-                <td><a href="index.php?page=supp&id=<?= $categorie['id_categorie'] ?>" class="btn btn-supp" onclick="return confirm('Etes vous certain de supprimer cet utilisateur ?')">Supprimer</a></td>
+                <td><a href="index.php?page=supprimerCategorie&id=<?= $categorie['id_categorie'] ?>" class="btn btn-supp" onclick="return confirm('Etes vous certain de supprimer cet utilisateur ?')">Supprimer</a></td>
             </tr>
         <?php
         }
