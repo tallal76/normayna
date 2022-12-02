@@ -29,7 +29,8 @@ if (isset($_POST['frmCategorie'])) {
 
         $queryInsert = new Sql();
         $queryInsert->inserer($requete); 
-        /*   header('Location:./index.php?page=acceuil'); c'est juste pour redireger */    
+        /*   header('Location:./index.php?page=acceuil'); c'est juste pour redireger */   
+        echo"Categorie bien enregistrer"; 
     }
 } else {
      $libelle = $description = "";
