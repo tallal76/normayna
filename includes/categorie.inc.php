@@ -24,15 +24,14 @@ if (isset($_POST['frmCategorie'])) {
 
         include './includes/frmCategorie.php';
     } else {
-         $requete = "INSERT INTO categorie (Libelle, Description)
+        $requete = "INSERT INTO categorie (Libelle, Description)
             VALUES ('$libelle', '$description');";
 
         $queryInsert = new Sql();
-        $queryInsert->inserer($requete); 
-        /*   header('Location:./index.php?page=acceuil'); c'est juste pour redireger */   
-        echo"Categorie bien enregistrer"; 
+        $queryInsert->inserer($requete);
+        header('Location:./index.php?page=majCategorie');
     }
 } else {
-     $libelle = $description = "";
-    include './includes/frmCategorie.php'; 
+    $libelle = $description = "";
+    include './includes/frmCategorie.php';
 }
